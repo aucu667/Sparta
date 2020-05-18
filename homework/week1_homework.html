@@ -1,196 +1,122 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week1 Homework</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Week1 Homework</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-
-        .wrap {
-            width: 700px;
-            /* width : 700px로 할 경우 image가 700px을 넘어가서 800px으로 조정함 --> 어떻게 이미지를 700px로 맞출 수 있나?*/
-            margin: auto;
-        }
-
-        .goods_img {
-            height: 400px;
-            background-image: url('https://i2.wp.com/myseolabo.com/wp-content/uploads/2019/06/macbookpro2019-2.jpg?resize=1080%2C675&ssl=1');
-            background-position: center;
-            background-size: cover;
-        }
-
-        .goods_info {
-            /* 스타일 없음 */
-            /* 제목과 가격을 분리시켜 제목은 왼쪽으로 붙이고 가격은 오른쪽으로 붙이고 싶으며 어떻게 하는지? */
-        }
-
-        .font_size1 {
-            font-size: 40px;
-        }
-
-        .font_size2 {
-            font-size: 20px;
-        }
-
-        .goods_order {
-            margin-top: 30px;
-        }
-
-        .goods_btn {
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .font_blue {
-            color: blue;
-        }
-
-        table {
-            border: 1px solide;
-            border-collapse: collapse;
-            margin: 30px auto;
-            width: 100%;
-            border-top: 1px solid #ced4da;
-        }
-
-        td,
-        th {
-            padding: 10px;
-            border-bottom: 1px solid #ced4da;
-        }
-    </style>
-
-    <script>
-        function order() {
-            let name = $('#name').val()
-            let quantity = $('#quantity').val()
-            let adress = $('#adress').val()
-            let phone = $('#phone').val()
-
-            if (name == '') {
-                alert('이름을 입력하세요');
-            } else if (quantity == '--수량을 선택하세요--') {
-                alert('수량을 입력하세요');
-            } else if (adress == '') {
-                alert('주소를 입력하세요');
-            } else if (phone == '') {
-                alert('전화번호를 입력하세요');
-            } else {
-                alert('주문이 완료되었습니다.')
-                let temp_html = `<tr><td>${name}</td><td>${quantity}</td><td>${adress}</td><td>${phone}</td></tr>`
-                $('#order_result').append(temp_html);
+        <style>
+            * {
+                font-family: 'Roboto', sans-serif;
             }
-        }
 
-        $(document).ready(function () {
-            $.ajax({
-                type: "GET",
-                url: "https://api.manana.kr/exchange/rate.json",
-                data: {},
-                success: function (response) {
-                    let exchangerate = response[1]['rate'];
-                    $('#exrate').text(exchangerate);
-                }
-            })
-        });
+            .wrap {
+                width: 800px;
+                /* width : 700px로 할 경우 image가 700px을 넘어가서 800px으로 조정함 --> 어떻게 이미지를 700px로 맞출 수 있나요?*/
+                margin: auto;
+            }
 
-    </script>
+            .goods_img {
+                text-align: center;
+            }
 
-</head>
+            .goods_info {
+                /* 스타일 없음 */
+                /* 제목과 가격을 분리시켜 제목은 왼쪽으로 붙이고 가격은 오른쪽으로 붙이고 싶으며 어떻게 하는지요? */
+            }
 
-<body>
-    <div class="wrap">
+            .font_size1 {
+                font-size: 40px;
+            }
 
-        <div class="goods_img">
-            <!-- <img src="MacBook Pro.jpg" /> -->
-        </div>
+            .font_size2 {
+                font-size: 20px;
+            }
 
-        <div id="info" class="goods_info">
-            <span class="font_size1">MacBook Pro</span> <span class="font_size2">가격: 2,000,000원/개</span>
-            <p>2.6GHz 6코어 9세대 Intel Core i7 프로세서(최대 4.5GHz Turbo Boost)</p>
-            <p>16GB 2666MHz DDR4 메모리</p>
-            <span class="font_blue">달러-원 환율: </span><span id="exrate" class="font_blue"></span>
-        </div>
+            .goods_order {
+                /* 스타일 없음 */
+            }
 
-        <div class="goods_order">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
-                </div>
-                <input id="name" type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default">
+            .goods_btn {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrap">
+            <div class="goods_img">
+                <img src="MacBook Pro.jpg" />
             </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">수량</label>
-                </div>
-                <select id="quantity" class="custom-select" id="inputGroupSelect01">
-                    <option selected>--수량을 선택하세요--</option>
-                    <option value="1">1개</option>
-                    <option value="2">2개</option>
-                    <option value="3">3개</option>
-                </select>
+            <div class="goods_info">
+                <span class="font_size1">MacBook Pro를 팝니다.</span> <span class="font_size2">가격: 2,000,000원/개</span>
+                <p>애플 ’16형 맥북프로’가 나왔다. 2016년 나온 터치바 맥북프로의 최신형인 16형 모델은 화면을 키운 것 말고 겉으로 보이는 대단한 디자인 변화는 없다. 그러나 열흘 가량 기기를
+                    사용해보니, 16형 맥북프로는 15형 맥북프로의 후계자라기보단 맥프로의 모바일 버전으로 보는 것이 적절하다고 생각된다.</p>
             </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+            <div class="goods_order">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">주문자 이름</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
                 </div>
-                <input id="adress" type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default">
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">수량</label>
+                    </div>
+                    <select class="custom-select" id="inputGroupSelect01">
+                        <option selected>--수량을 선택하세요--</option>
+                        <option value="1">1개</option>
+                        <option value="2">2개</option>
+                        <option value="3">3개</option>
+                    </select>
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">주소</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default">
+                </div>
             </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputGroup-sizing-default">전화번호</span>
-                </div>
-                <input id="phone" type="text" class="form-control" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default">
+            <div class="goods_btn">
+                <button type="button" class="btn btn-primary">주문하기</button>
             </div>
         </div>
-
-        <div class="goods_btn">
-            <button onclick="order()" type="button" class="btn btn-primary">주문하기</button>
-        </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>이름</th>
-                    <th>수량</th>
-                    <th>주소</th>
-                    <th>전화번호</th>
-                </tr>
-            </thead>
-            <tbody id="order_result">
-            </tbody>
-        </table>
-    </div>
-</body>
+    </body>
 
 </html>
